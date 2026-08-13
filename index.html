@@ -4,23 +4,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lyn's Anime Corner</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            background-color: #fff8f3;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 42px;
+            color: #7b3f61;
+            margin-bottom: 5px;
+        }
+
+        body > p {
+            text-align: center;
+            font-size: 17px;
+            color: #777;
+            margin-bottom: 35px;
+        }
+
+        .shop-layout {
+            display: flex;
+            gap: 30px;
+            align-items: stretch;
+        }
+
+        .owner {
+            width: 30%;
+            text-align: center;
+            background-color: #f3dce8;
+            padding: 25px;
+            border-radius: 18px;
+            box-sizing: border-box;
+        }
+
+        .owner h2 {
+            color: #7b3f61;
+        }
+
+        .owner img {
+            width: 180px;
+            max-width: 100%;
+            margin-top: 15px;
+        }
+
+        .products {
+            width: 70%;
+        }
+
+        .products > h2 {
+            text-align: center;
+            font-size: 30px;
+            color: #7b3f61;
+            margin-top: 0;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .product-list {
+            display: flex;
+            gap: 15px;
+        }
+
+        article {
+            flex: 1;
+            text-align: center;
+            padding: 18px;
+            background-color: #ffffff;
+            border: 1px solid #e8c8d8;
+            border-radius: 15px;
+            box-sizing: border-box;
+        }
+
+        article h3 {
+            color: #7b3f61;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        article p:first-of-type {
+            font-size: 18px;
+            font-weight: bold;
+            color: #c44f87;
+            margin: 8px;
+        }
+
+        article p:nth-of-type(2) {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        article img {
+            width: 130px;
+            height: 150px;
+            object-fit: contain;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 800px) {
+            .shop-layout {
+                flex-direction: column;
+            }
+
+            .owner,
+            .products {
+                width: 100%;
+            }
+
+            .product-list {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
     <h1>Lyn's Anime Corner</h1>
 
     <p>Your favorite anime-inspired merchandise, all in one place!</p>
 
-    <section>
-        <h2>Lyn-Lyn Layague</h2>
+    <div class="shop-layout">
 
-        <p>
-            I created Lyn's Anime Corner to share my passion for anime
-            and merchandise with fellow fans.
-        </p>
+        <section class="owner">
+            <h2>Lyn-Lyn Layague</h2>
 
-        <img src="LOGO ANIME.png" alt="Lyn's Anime Corner shop logo">
-    </section>
+            <p>
+                I created Lyn's Anime Corner to share my passion for anime
+                and merchandise with fellow fans.
+            </p>
+
+            <img src="LOGO ANIME.png" alt="Lyn's Anime Corner shop logo">
+        </section>
+
+        <div class="products">
+
+            <h2>Our Products</h2>
+
+            <div class="product-list">
+
+                <article>
+                    <h3>Anime Figures</h3>
+                    <p>₱850</p>
+                    <p>Collectible anime figures featuring fun and detailed character designs.</p>
+                    <img src="anime-figure.jpg" alt="Anime figure collectible">
+                </article>
+
+                <article>
+                    <h3>Anime Accessories</h3>
+                    <p>₱80 - ₱120</p>
+                    <p>Cute anime accessories such as keychains, pins, and bag charms.</p>
+                    <img src="anime-accessories.jpg" alt="Anime accessories such as keychains and pins">
+                </article>
+
+                <article>
+                    <h3>Manga Volume</h3>
+                    <p>₱350</p>
+                    <p>A manga volume for fans who enjoy reading anime-inspired stories.</p>
+                    <img src="manga-volume.jpg" alt="Manga volume">
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </body>
 </html>
