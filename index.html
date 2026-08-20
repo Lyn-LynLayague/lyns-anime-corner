@@ -22,7 +22,7 @@
             margin-bottom: 5px;
         }
 
-        body > p {
+        header > p {
             text-align: center;
             font-size: 17px;
             color: #777;
@@ -55,7 +55,8 @@
         }
 
         .products {
-            width: 70%;
+                width: 100%;
+                text-align: center;
         }
 
         .products > h2 {
@@ -69,18 +70,27 @@
         }
 
         .product-list {
-            display: flex;
-            gap: 15px;
+                display: flex;
+                justify-content: center;
+                gap: 20px;
         }
 
         article {
             flex: 1;
+            max-width: 250px;
             text-align: center;
-            padding: 18px;
+            padding: 20px;
             background-color: #ffffff;
-            border: 1px solid #e8c8d8;
-            border-radius: 15px;
+            border: 2px solid #e8c8d8;
+            border-radius: 18px;
             box-sizing: border-box;
+            box-shadow: 0 4px 12px rgba(123, 63, 97, 0.12);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 18px rgba(123, 63, 97, 0.2);
         }
 
         article h3 {
@@ -123,27 +133,62 @@
                 flex-direction: column;
             }
         }
+
+        nav {
+            text-align: center;
+            margin: 20px 0 40px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #7b3f61;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #c44f87;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #777;
+            font-size: 14px;
+        }
+
     </style>
 </head>
 
 <body>
 
-    <h1>Lyn's Anime Corner</h1>
+    <header>
+        <h1>Lyn's Anime Corner</h1>
 
-    <p>Your favorite anime-inspired merchandise, all in one place!</p>
+        <p>Your favorite anime-inspired merchandise, all in one place!</p>
 
-    <div class="shop-layout">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <section class="owner">
-            <h2>Lyn-Lyn Layague</h2>
+    <main>
 
-            <p>
-                I created Lyn's Anime Corner to share my passion for anime
-                and merchandise with fellow fans.
-            </p>
-
-            <img src="LOGO ANIME.png" alt="Lyn's Anime Corner shop logo">
-        </section>
+        <div class="shop-layout">
 
         <div class="products">
 
@@ -176,7 +221,13 @@
 
         </div>
 
-    </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Lyn's Anime Corner</p>
+    </footer>
 
 </body>
 </html>
