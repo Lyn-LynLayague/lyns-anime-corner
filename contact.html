@@ -76,6 +76,58 @@
         color: #777;
         font-size: 14px;
     }
+
+    form {
+      max-width: 450px;
+      margin: 30px auto;
+    }
+
+    fieldset {
+      padding: 18px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      background-color: #fff;
+    }
+
+    legend {
+      font-size: 1.1rem;
+      font-weight: bold;
+      padding: 0 8px;
+    }
+
+    form p {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #bbb;
+      border-radius: 5px;
+      font-size: 0.9rem;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
 </style>
 
 </head>
@@ -106,6 +158,39 @@
         <li>Email: lynsanimecorner@gmail.com</li>
         <li>Facebook: Lyn's Anime Corner</li>
     </ul>
+
+            <form id="demo">
+          <fieldset>
+            <legend>Your details</legend>
+            <p>
+              <label for="nm">Name</label><br>
+              <input type="text" id="nm" name="nm" required>
+            </p>
+            <p>
+              <label for="em">Email</label><br>
+              <input type="email" id="em" name="em" required>
+            </p>
+
+            <p>
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject">
+                <option value="order-status">Select an option</option>
+                <option value="product-question">Product question</option>
+                <option value="order-status">Order status</option>
+                <option value="product-availability">Product availability</option>
+                <option value="wholesale-enquiry">Wholesale enquiry</option>
+                <option value="something-else">Something else</option>
+              </select>
+           </p>
+
+            <p>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </p>
+
+            <button type="submit">Send message</button>
+         </fieldset>
+        </form>
 
 </main>
 
