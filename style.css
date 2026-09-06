@@ -96,54 +96,44 @@ nav a {
     letter-spacing: 2px;
 }
 
-article {
+.product-card {
     flex: 1;
     max-width: 250px;
     text-align: center;
     padding: 20px;
-    background-color: white;
-    border: 2px solid #e8c8d8;
+    margin-bottom: 20px;
+    background-color: var(--light-background);
+    border: 2px solid var(--brand-color);
+    border-left: 5px solid var(--brand-color);
     border-radius: 18px;
     box-shadow: 0 4px 12px rgba(123, 63, 97, 0.12);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
-article:hover {
+.product-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(123, 63, 97, 0.2);
 }
 
-article p:first-of-type {
+.product-card h3 {
+    color: var(--dark-ink);
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.product-card p:first-of-type {
     font-size: 18px;
     font-weight: bold;
     color: var(--dark-ink);
     margin: 8px;
 }
 
-article p:nth-of-type(2) {
+.product-card p:nth-of-type(2) {
     color: var(--muted-grey);
     font-size: 14px;
     line-height: 1.4;
 }
 
-article {
-    flex: 1;
-    max-width: 250px;
-    text-align: center;
-    padding: 20px;
-    background-color: white;
-    border: 2px solid var(--muted-grey);
-    border-radius: 18px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-}
-
-article h3 {
-    color: var(--dark-ink);
-    font-size: 20px;
-    margin-bottom: 8px;
-}
-
-article img {
+.product-card img {
     width: 130px;
     height: 150px;
     object-fit: contain;
@@ -216,16 +206,18 @@ article img {
 }
 
 .contact-page fieldset {
-    padding: 18px;
-    border: 2px solid #ddd;
+    padding: 20px;
+    border: 2px solid var(--brand-color);
     border-radius: 10px;
-    background-color: white;
+    background-color: var(--light-background);
 }
 
 .contact-page legend {
+    color: var(--dark-ink);
     font-size: 1.1rem;
     font-weight: bold;
     padding: 0 8px;
+    border-bottom: 3px solid var(--brand-color);
 }
 
 .contact-page form p {
@@ -252,11 +244,21 @@ article img {
     resize: vertical;
 }
 
+.contact-page input:focus,
+.contact-page select:focus,
+.contact-page textarea:focus {
+    outline: 3px solid var(--dark-ink);
+    outline-offset: 2px;
+}
+
 .contact-page button {
-    padding: 8px 16px;
+    background-color: var(--brand-color);
+    color: var(--dark-ink);
+    padding: 12px 20px;
     border: none;
-    border-radius: 5px;
-    font-size: 0.9rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
 }
 
