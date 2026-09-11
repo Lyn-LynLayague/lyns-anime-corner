@@ -78,10 +78,11 @@ nav a {
 }
 
 /* PRODUCT CARD */
-.product-list {
+.product-grid {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center; /* optional */
+    gap: 24px;
 }
 
 .products {
@@ -100,7 +101,7 @@ nav a {
 }
 
 .product-card {
-    flex: 1;
+    flex: 1 1 240px;
     max-width: 250px;
     text-align: center;
     padding: 20px;
@@ -169,10 +170,6 @@ nav a {
     .owner,
     .products {
         width: 100%;
-    }
-
-    .product-list {
-        flex-direction: column;
     }
 }
 
