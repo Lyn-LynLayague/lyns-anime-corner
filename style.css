@@ -21,8 +21,10 @@ body {
 /* LAYOUT REGIONS */
 header {
     background-color: var(--brand-color);
-    padding: 10px 0;
-    text-align: center;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
@@ -53,11 +55,12 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    gap: 20px;
 }
 
 nav li {
-    display: inline-block;
-    margin-right: 15px;
+    margin: 0;
 }
 
 nav a {
@@ -138,6 +141,23 @@ nav a {
     height: 150px;
     object-fit: contain;
     margin-top: 10px;
+}
+
+/* CENTRED BANNER */
+.shop-banner {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--brand-color);
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+
+.shop-banner h2 {
+    margin: 0;
+    color: var(--dark-ink);
+    font-size: 32px;
 }
 
 /* 6. Responsive layout */
