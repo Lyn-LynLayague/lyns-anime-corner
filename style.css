@@ -19,12 +19,44 @@ body {
 }
 
 /* LAYOUT REGIONS */
+.page {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-areas:
+        "masthead masthead"
+        "side main"
+        "foot foot";
+    gap: 16px;
+}
+
 header {
+    grid-area: masthead;
     background-color: var(--brand-color);
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+aside {
+    grid-area: side;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+aside h2 {
+    color: var(--dark-ink);
+    font-size: 20px;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside li {
+    margin-bottom: 10px;
 }
 
 header h1 {
@@ -40,10 +72,12 @@ header > p {
 }
 
 main {
+    grid-area: main;
     padding: 20px;
 }
 
 footer {
+    grid-area: foot;
     background-color: var(--dark-ink);
     color: var(--light-background);
     padding: 20px;
@@ -81,7 +115,7 @@ nav a {
 .product-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* optional */
+    justify-content: center;
     gap: 24px;
 }
 
@@ -163,8 +197,13 @@ nav a {
 
 /* 6. Responsive layout */
 @media (max-width: 800px) {
-    .shop-layout {
-        flex-direction: column;
+    .page {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "masthead"
+            "side"
+            "main"
+            "foot";
     }
 
     .owner,
@@ -282,8 +321,8 @@ nav a {
 /* PRODUCT PAGE */
 .product-page {
     max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .product-page .product {
