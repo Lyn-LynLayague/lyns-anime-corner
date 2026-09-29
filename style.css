@@ -196,20 +196,32 @@ nav a {
 }
 
 /* 6. Responsive layout */
-@media (max-width: 800px) {
-    .page {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "masthead"
-            "side"
-            "main"
-            "foot";
-    }
 
-    .owner,
-    .products {
-        width: 100%;
+/* Base: mobile */
+.page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "masthead"
+        "main"
+        "side"
+        "foot";
+}
+
+/* Tablet and up */
+@media (min-width: 700px) {
+    .page {
+        grid-template-columns: 220px 1fr;
+        grid-template-areas:
+            "masthead masthead"
+            "side     main"
+            "foot     foot";
     }
+}
+
+.owner,
+.products {
+    width: 100%;
 }
 
 /* ABOUT PAGE */
