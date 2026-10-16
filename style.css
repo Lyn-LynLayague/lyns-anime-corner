@@ -470,3 +470,44 @@ nav a {
 .email-field input[type="email"] {
     margin: 0;
 }
+
+
+/* Shop Decisions */
+.shop-decisions {
+    background-color: #ffffff;
+    border: 1px solid #e8c9d8;
+    border-radius: 10px;
+    padding: 22px;
+    margin: 25px 0;
+}
+
+.shop-decisions > h2 {
+    color: #7b3f61;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.decision-card {
+    padding: 14px 0;
+    border-bottom: 1px solid #eadce4;
+}
+
+.decision-card:last-child {
+    border-bottom: none;
+}
+
+.decision-card h3 {
+    color: #7b3f61;
+    font-size: 17px;
+    margin: 0 0 10px;
+}
+
+.decision-card p {
+    color: #594451;
+    margin: 7px 0;
+}
+
+.decision-card span {
+    color: #7b3f61;
+    font-weight: bold;
+}
